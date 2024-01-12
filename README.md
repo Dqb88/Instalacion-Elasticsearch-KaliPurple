@@ -16,14 +16,14 @@ sudo bash -c "export HOSTNAME=kali-purple.kali.purple; apt-get install elasticse
 # Anotar el password "token" que se devuelve y que se usará cuando tengamos en local instalado y pida credenciales.
 
 
-# 2. Convertir a single-node setup:
-# -----------------------------------------------------------------------------------------------------
+# 2. Convertir a single-node setup
+# -----------------------------------
 sudo sed -e '/cluster.initial_master_nodes/ s/^#*/#/' -i /etc/elasticsearch/elasticsearch.yml
 echo "discovery.type: single-node" | sudo tee -a /etc/elasticsearch/elasticsearch.yml
 
 
-# 3. Instalar Kibana:
-# ------------------
+# 3. Instalar Kibana
+# -------------------
 sudo apt install kibana
 sudo /usr/share/kibana/bin/kibana-encryption-keys generate -q
 # Añadir keys a /etc/kibana/kibana.yml
@@ -33,7 +33,7 @@ sudo systemctl enable elasticsearch kibana --now
 
 
 
-# 4. Kibana:
+# 4. Kibana
 # -----------------
 sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
 
@@ -47,7 +47,7 @@ sudo /usr/share/kibana/bin/kibana-verification-code
 
 
 
-# 4.Habiliatr HTTPS for Kibana:
+# 4.Habilitar HTTPS for Kibana
 # --------------------------
 
 /usr/share/elasticsearch/bin/elasticsearch-certutil ca
