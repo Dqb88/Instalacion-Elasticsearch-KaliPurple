@@ -6,7 +6,7 @@
 
 
 # 1. Instalar dependencias
-# ------------------------
+# --------------------------
 
 sudo apt-get install curl
 curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/elastic-archive-keyring.gpg
