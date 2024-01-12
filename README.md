@@ -3,6 +3,8 @@
 # Instalación stack Elastic
 - En el presente documento se especifican los pasos a seguir para la instalación en entorno local del stack de Elastic search.
 
+
+
 # 1. Instalar dependencias
 # ------------------------
 
